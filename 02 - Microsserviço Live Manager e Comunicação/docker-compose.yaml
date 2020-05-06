@@ -3,7 +3,7 @@ version: '3'
 services:
 
   backend:
-    build: backend
+    build: ./backend
     entrypoint: ./backend/.docker/entrypoint.sh
     container_name: micro-live-manager-backend
     environment:
@@ -18,7 +18,7 @@ services:
       - app-network
 
   frontend:
-    build: frontend
+    build: ./frontend
     entrypoint: ./frontend/.docker/entrypoint.sh
     container_name: micro-live-manager-frontend
     tty: true
